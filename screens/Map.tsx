@@ -68,7 +68,11 @@ export default function ScreenMap() {
   //   fetchDataFromAPI(latitude, longitude);
   // })
   const handleMapPress = event => {
+    console.log('modal clicked');
     const {coordinate, title} = event.nativeEvent;
+    console.log('coordinate--', coordinate);
+    console.log('title--', title);
+    // setMarkers(prevMarkers => [...prevMarkers, coordinate]);
     setSelectedLocation({...coordinate, title});
     setShowModal(true);
   };

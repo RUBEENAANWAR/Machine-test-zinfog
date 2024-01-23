@@ -17,6 +17,7 @@ import {useNavigation} from '@react-navigation/native';
 function ScreenLocation() {
   const savedLocations = useSelector(selectSavedLocations);
   const dispatch = useDispatch();
+  console.log('savedLocations', savedLocations);
   const navigation = useNavigation();
 
   const handleContainerClick = location => {
