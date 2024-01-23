@@ -17,7 +17,6 @@ import {useNavigation} from '@react-navigation/native';
 function ScreenLocation() {
   const savedLocations = useSelector(selectSavedLocations);
   const dispatch = useDispatch();
-  console.log('savedLocations', savedLocations);
   const navigation = useNavigation();
 
   const handleContainerClick = location => {
@@ -40,12 +39,12 @@ function ScreenLocation() {
         </View>
         <ScrollView style={{flex: 1}}>
           <View>
-            <Text numberOfLines={2} ellipsizeMode="tail">
+            <Text style={{color:'#000'}} numberOfLines={2} ellipsizeMode="tail">
               Address: {item?.address}
             </Text>
-            <Text>Latitude: {item?.latitude}</Text>
-            <Text>Longitude: {item?.longitude}</Text>
-            <Text>Time: {item?.time}</Text>
+            <Text style={{color:'#000'}}>Latitude: {item?.latitude}</Text>
+            <Text style={{color:'#000'}}>Longitude: {item?.longitude}</Text>
+            <Text style={{color:'#000'}}>Time: {item?.time}</Text>
           </View>
         </ScrollView>
         <TouchableOpacity
